@@ -1,0 +1,52 @@
+{
+  "mysql":{
+    "local":{
+      "client": "mysql",
+      "connection": {
+        "host":"192.168.3.101",
+        "port": "3306",
+        "user": "root",
+        "password": "system@123",
+        "database": "gag_webhook"
+      },
+      "pool": {
+        "min": 0,
+        "max": 10
+      }
+    },
+    "prod": {
+      "client": "mysql",
+      "connection": {
+        "host":"192.168.3.101",
+        "port": "3306",
+        "user": "root",
+        "password": "system@123",
+        "database": "gag_webhook"
+      },
+      "pool": {
+        "min": 0,
+        "max": 10
+      }
+    },
+    "test": {
+      "client": "mysql",
+      "connection": {
+        "host":"192.168.3.101",
+        "port": "3306",
+        "user": "root",
+        "password": "system@123",
+        "database": "gag_webhook"
+      },
+      "pool": {
+        "min": 0,
+        "max": 10
+      }
+    }
+  },
+  "projectDeploy":{
+    "gitCloneLocalPath_local": "/Users/yaojiasong/gooagoo/project/node",
+    "gitCloneLocalPath_prod": "/home/hewenshan/yaojiasong/webhook-git",
+    "gitBackLocalPath_prod":"/home/hewenshan/yaojiasong/webhook-back",
+    "gitBackLocalPath_local":"/Users/yaojiasong/gooagoo/webhook-back"
+  }
+}

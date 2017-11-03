@@ -1,0 +1,71 @@
+Arguments: 
+  /usr/local/bin/node /usr/local/bin/yarn add mysql
+
+PATH: 
+  /Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/Cellar/python3/3.6.2/bin:/Library/Frameworks/Python.framework/Versions/3.5/bin:/usr/local/Cellar/python3/3.6.2/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/NowaGUI.app/Contents/Resources/app/nodes:/Users/yaojiasong/.nowa-gui/installation/node_modules/.bin:/Applications/NowaGUI.app/Contents/Resources/app/node_modules/.bin:/Users/yaojiasong/bin
+
+Yarn version: 
+  1.1.0
+
+Node version: 
+  8.1.3
+
+Platform: 
+  darwin x64
+
+npm manifest: 
+  {
+    "name": "node-base-api",
+    "version": "1.0.0",
+    "description": "拉登一号 API",
+    "private": true,
+    "dependencies": {
+      "egg": "^1.8.0",
+      "egg-scripts": "^1.2.0"
+    },
+    "devDependencies": {
+      "autod": "^2.9.0",
+      "autod-egg": "^1.0.0",
+      "egg-bin": "^4.3.0",
+      "egg-ci": "^1.8.0",
+      "egg-mock": "^3.12.0",
+      "eslint": "^4.7.0",
+      "eslint-config-egg": "^5.1.0",
+      "webstorm-disable-index": "^1.2.0"
+    },
+    "engines": {
+      "node": ">=6.0.0"
+    },
+    "scripts": {
+      "start": "egg-scripts start --daemon --port=7702",
+      "stop": "egg-scripts stop",
+      "dev": "set EGG_SERVER_ENV=local && egg-bin dev",
+      "prod": " set EGG_SERVER_ENV=prod && egg-scripts start --daemon --port=7702",
+      "pretest": " set EGG_SERVER_ENV=test && egg-scripts start --daemon --port=7703",
+      "debug": "egg-bin debug",
+      "test": "npm run lint -- --fix && npm run test-local",
+      "test-local": "egg-bin test",
+      "cov": "egg-bin cov",
+      "lint": "eslint .",
+      "ci": "npm run lint && npm run cov",
+      "autod": "autod"
+    },
+    "ci": {
+      "version": "6, 8"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "author": "YJSON",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
+
+Trace: 
+  Error: ENOENT: no such file or directory, open '/Users/yaojiasong/gooagoo/project/react-gag/node-base-api/node_modules/babel-code-frame/node_modules/ansi-styles/index.js'

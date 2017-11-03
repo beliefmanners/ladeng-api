@@ -1,0 +1,63 @@
+{
+  "name": "node-base-api",
+  "version": "1.0.0",
+  "description": "拉登一号 API",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "bookshelf": "^0.10.4",
+    "egg": "^1.9.0",
+    "egg-cors": "^1.2.0",
+    "egg-redis": "^1.0.2",
+    "egg-scripts": "^1.2.0",
+    "egg-security": "^1.12.1",
+    "egg-socket.io": "^2.1.0",
+    "knex": "^0.13.0",
+    "mysql": "^2.15.0",
+    "node-ssh": "^5.0.0",
+    "shelljs": "^0.7.8",
+    "simple-git": "^1.79.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "autod-egg": "^1.0.0",
+    "egg-bin": "^4.3.3",
+    "egg-ci": "^1.8.0",
+    "egg-mock": "^3.12.2",
+    "eslint": "^4.8.0",
+    "eslint-config-egg": "^5.1.1",
+    "mocha": "^4.0.1",
+    "webstorm-disable-index": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "start": "EGG_SERVER_ENV=prod egg-scripts start --daemon --cluster --port=18341 --sticky",
+    "stop": "egg-scripts stop",
+    "dev": " EGG_SERVER_ENV=local node index.js --sticky --cluster",
+    "prod": " EGG_SERVER_ENV=prod npm start --daemon --port=18341 --sticky",
+    "pretest": " set EGG_SERVER_ENV=test && egg-scripts start --daemon --port=18341",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod"
+  },
+  "webhook": {
+    "buildPath": "/app"
+  },
+  "ci": {
+    "version": "6, 8"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "YJSON",
+  "license": "MIT"
+}
